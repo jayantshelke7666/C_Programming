@@ -1,30 +1,37 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void Displ(int iFirst,int iSecond)
+void DisplyGrade(float fMarks)
 {
-    if(iFirst > iSecond )
+    if( fMarks >=90 && fMarks <=100 )
     {
-        printf("%d is Greater",iFirst);
+        printf("Grade A");
     }
-    else if(iSecond > iFirst)
+    else if( fMarks >=75 && fMarks <=89 )
     {
-        printf("%d is Gteater",iSecond);
+        printf("Grade B");
     }
-    else
+    else if( fMarks >=60 && fMarks <=74 )
     {
-        printf("Both numbers are same");
+        printf("Grade c");
+    }
+    else if( fMarks >=40 && fMarks <=59 )
+    {
+        printf("Grade D");
+    }
+    else 
+    {
+        printf("Fail");
     }
 }
 int main()
 {
-    int iValue1 = 0;
-    int iValue2 = 0;
+    int iValue = 0;
 
     printf("Enter two numbers :");
-    scanf("%d %d", &iValue1 , &iValue2);
+    scanf("%d", &iValue);
 
-    FindGreater(iValue1 , iValue2);
+    DisplyGrade(iValue);
 
     return EXIT_SUCCESS;
 }
